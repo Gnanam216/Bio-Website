@@ -36,7 +36,7 @@ const PORTFOLIO_DATA = {
   experience: [
     {
       role: "Software Engineer",
-      company: "Chenosa Technology Solution Pvt. Ltd.",
+      company: "Chenosa Technology Solutions Pvt. Ltd.",
       duration: "Dec 2023 - Present",
       location: "Chennai, TN",
       description: "Contributing throughout the complete Software Development Life Cycle (SDLC) from requirement gathering to production support. Leading agile development activities and mentoring team members.",
