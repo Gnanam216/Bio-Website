@@ -9,7 +9,7 @@ const PORTFOLIO_DATA = {
     phone: "+91 8111025988",
     location: "Chennai, Tamil Nadu",
     socials: {
-      github: "https://github.com",
+      github: "https://github.com/Gnanam216",
       linkedin: "https://linkedin.com",
       resume: "resume.html"
     }
