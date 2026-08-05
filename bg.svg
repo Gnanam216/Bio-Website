@@ -1,0 +1,276 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#020b18;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#040d1f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#010810;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0" />
+      <stop offset="30%" style="stop-color:#8b5cf6;stop-opacity:0.7" />
+      <stop offset="70%" style="stop-color:#06b6d4;stop-opacity:0.7" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Grid lines horizontal -->
+  <g opacity="0.04" stroke="#8b5cf6" stroke-width="1">
+    <line x1="0" y1="60" x2="1920" y2="60"/>
+    <line x1="0" y1="120" x2="1920" y2="120"/>
+    <line x1="0" y1="180" x2="1920" y2="180"/>
+    <line x1="0" y1="240" x2="1920" y2="240"/>
+    <line x1="0" y1="300" x2="1920" y2="300"/>
+    <line x1="0" y1="360" x2="1920" y2="360"/>
+    <line x1="0" y1="420" x2="1920" y2="420"/>
+    <line x1="0" y1="480" x2="1920" y2="480"/>
+    <line x1="0" y1="540" x2="1920" y2="540"/>
+    <line x1="0" y1="600" x2="1920" y2="600"/>
+    <line x1="0" y1="660" x2="1920" y2="660"/>
+    <line x1="0" y1="720" x2="1920" y2="720"/>
+    <line x1="0" y1="780" x2="1920" y2="780"/>
+    <line x1="0" y1="840" x2="1920" y2="840"/>
+    <line x1="0" y1="900" x2="1920" y2="900"/>
+    <line x1="0" y1="960" x2="1920" y2="960"/>
+    <line x1="0" y1="1020" x2="1920" y2="1020"/>
+  </g>
+  <!-- Grid lines vertical -->
+  <g opacity="0.04" stroke="#06b6d4" stroke-width="1">
+    <line x1="80" y1="0" x2="80" y2="1080"/>
+    <line x1="160" y1="0" x2="160" y2="1080"/>
+    <line x1="240" y1="0" x2="240" y2="1080"/>
+    <line x1="320" y1="0" x2="320" y2="1080"/>
+    <line x1="400" y1="0" x2="400" y2="1080"/>
+    <line x1="480" y1="0" x2="480" y2="1080"/>
+    <line x1="560" y1="0" x2="560" y2="1080"/>
+    <line x1="640" y1="0" x2="640" y2="1080"/>
+    <line x1="720" y1="0" x2="720" y2="1080"/>
+    <line x1="800" y1="0" x2="800" y2="1080"/>
+    <line x1="880" y1="0" x2="880" y2="1080"/>
+    <line x1="960" y1="0" x2="960" y2="1080"/>
+    <line x1="1040" y1="0" x2="1040" y2="1080"/>
+    <line x1="1120" y1="0" x2="1120" y2="1080"/>
+    <line x1="1200" y1="0" x2="1200" y2="1080"/>
+    <line x1="1280" y1="0" x2="1280" y2="1080"/>
+    <line x1="1360" y1="0" x2="1360" y2="1080"/>
+    <line x1="1440" y1="0" x2="1440" y2="1080"/>
+    <line x1="1520" y1="0" x2="1520" y2="1080"/>
+    <line x1="1600" y1="0" x2="1600" y2="1080"/>
+    <line x1="1680" y1="0" x2="1680" y2="1080"/>
+    <line x1="1760" y1="0" x2="1760" y2="1080"/>
+    <line x1="1840" y1="0" x2="1840" y2="1080"/>
+  </g>
+
+  <!-- Code text lines - left panel -->
+  <g font-family="'Courier New', monospace" filter="url(#glow)">
+    <!-- Keywords in purple -->
+    <text x="60" y="80" font-size="13" fill="#8b5cf6" opacity="0.75">function</text>
+    <text x="140" y="80" font-size="13" fill="#e2e8f0" opacity="0.55"> initializeApp</text>
+    <text x="310" y="80" font-size="13" fill="#06b6d4" opacity="0.55">(config)</text>
+    <text x="370" y="80" font-size="13" fill="#94a3b8" opacity="0.45"> {</text>
+
+    <text x="80" y="106" font-size="13" fill="#8b5cf6" opacity="0.65">  const</text>
+    <text x="130" y="106" font-size="13" fill="#e2e8f0" opacity="0.5"> server</text>
+    <text x="195" y="106" font-size="13" fill="#94a3b8" opacity="0.45"> =</text>
+    <text x="210" y="106" font-size="13" fill="#06b6d4" opacity="0.6"> express</text>
+    <text x="270" y="106" font-size="13" fill="#94a3b8" opacity="0.45">();</text>
+
+    <text x="80" y="132" font-size="13" fill="#8b5cf6" opacity="0.6">  const</text>
+    <text x="130" y="132" font-size="13" fill="#e2e8f0" opacity="0.5"> port</text>
+    <text x="170" y="132" font-size="13" fill="#94a3b8" opacity="0.4"> =</text>
+    <text x="185" y="132" font-size="13" fill="#f59e0b" opacity="0.6"> 3000</text>
+    <text x="218" y="132" font-size="13" fill="#94a3b8" opacity="0.4">;</text>
+
+    <text x="80" y="158" font-size="13" fill="#8b5cf6" opacity="0.55">  return</text>
+    <text x="140" y="158" font-size="13" fill="#e2e8f0" opacity="0.45"> server</text>
+    <text x="198" y="158" font-size="13" fill="#94a3b8" opacity="0.4">;</text>
+
+    <text x="60" y="184" font-size="13" fill="#94a3b8" opacity="0.4">}</text>
+
+    <text x="60" y="220" font-size="13" fill="#6b7280" opacity="0.5">// Database connection</text>
+    <text x="60" y="246" font-size="13" fill="#8b5cf6" opacity="0.65">async function</text>
+    <text x="175" y="246" font-size="13" fill="#06b6d4" opacity="0.6"> connectDB</text>
+    <text x="255" y="246" font-size="13" fill="#94a3b8" opacity="0.4">() {</text>
+
+    <text x="80" y="272" font-size="13" fill="#8b5cf6" opacity="0.6">  try</text>
+    <text x="108" y="272" font-size="13" fill="#94a3b8" opacity="0.4"> {</text>
+    <text x="80" y="298" font-size="13" fill="#8b5cf6" opacity="0.55">    await</text>
+    <text x="130" y="298" font-size="13" fill="#e2e8f0" opacity="0.45"> mongoose</text>
+    <text x="200" y="298" font-size="13" fill="#94a3b8" opacity="0.4">.</text>
+    <text x="208" y="298" font-size="13" fill="#06b6d4" opacity="0.6">connect</text>
+    <text x="258" y="298" font-size="13" fill="#94a3b8" opacity="0.4">(uri);</text>
+    <text x="80" y="324" font-size="13" fill="#8b5cf6" opacity="0.5">  } catch</text>
+    <text x="145" y="324" font-size="13" fill="#94a3b8" opacity="0.4"> (err) {</text>
+    <text x="100" y="350" font-size="13" fill="#e2e8f0" opacity="0.45">    console</text>
+    <text x="164" y="350" font-size="13" fill="#94a3b8" opacity="0.4">.</text>
+    <text x="172" y="350" font-size="13" fill="#06b6d4" opacity="0.55">error</text>
+    <text x="207" y="350" font-size="13" fill="#94a3b8" opacity="0.4">(err);</text>
+    <text x="80" y="376" font-size="13" fill="#94a3b8" opacity="0.35">  }</text>
+    <text x="60" y="402" font-size="13" fill="#94a3b8" opacity="0.35">}</text>
+
+    <!-- More code lower left -->
+    <text x="60" y="450" font-size="13" fill="#6b7280" opacity="0.45">// API Routes</text>
+    <text x="60" y="476" font-size="13" fill="#e2e8f0" opacity="0.5">app</text>
+    <text x="82" y="476" font-size="13" fill="#94a3b8" opacity="0.4">.</text>
+    <text x="90" y="476" font-size="13" fill="#06b6d4" opacity="0.6">get</text>
+    <text x="112" y="476" font-size="13" fill="#94a3b8" opacity="0.4">(</text>
+    <text x="120" y="476" font-size="13" fill="#10b981" opacity="0.65">'/api/users'</text>
+    <text x="220" y="476" font-size="13" fill="#94a3b8" opacity="0.4">,</text>
+    <text x="228" y="476" font-size="13" fill="#8b5cf6" opacity="0.55">async</text>
+    <text x="270" y="476" font-size="13" fill="#e2e8f0" opacity="0.45"> (req, res)</text>
+    <text x="350" y="476" font-size="13" fill="#94a3b8" opacity="0.4"> => {</text>
+
+    <text x="80" y="502" font-size="13" fill="#8b5cf6" opacity="0.5">  const</text>
+    <text x="130" y="502" font-size="13" fill="#e2e8f0" opacity="0.45"> users</text>
+    <text x="174" y="502" font-size="13" fill="#94a3b8" opacity="0.4"> =</text>
+    <text x="188" y="502" font-size="13" fill="#8b5cf6" opacity="0.5"> await</text>
+    <text x="230" y="502" font-size="13" fill="#e2e8f0" opacity="0.45"> User</text>
+    <text x="258" y="502" font-size="13" fill="#94a3b8" opacity="0.4">.</text>
+    <text x="265" y="502" font-size="13" fill="#06b6d4" opacity="0.55">findAll</text>
+    <text x="310" y="502" font-size="13" fill="#94a3b8" opacity="0.4">();</text>
+
+    <text x="80" y="528" font-size="13" fill="#e2e8f0" opacity="0.45">  res</text>
+    <text x="108" y="528" font-size="13" fill="#94a3b8" opacity="0.4">.</text>
+    <text x="115" y="528" font-size="13" fill="#06b6d4" opacity="0.55">json</text>
+    <text x="143" y="528" font-size="13" fill="#94a3b8" opacity="0.4">({ users });</text>
+    <text x="60" y="554" font-size="13" fill="#94a3b8" opacity="0.35">});</text>
+  </g>
+
+  <!-- Code text - right side -->
+  <g font-family="'Courier New', monospace" filter="url(#glow)">
+    <text x="1100" y="100" font-size="13" fill="#6b7280" opacity="0.5">// Machine Learning Pipeline</text>
+    <text x="1100" y="126" font-size="13" fill="#8b5cf6" opacity="0.65">import</text>
+    <text x="1148" y="126" font-size="13" fill="#e2e8f0" opacity="0.5"> numpy</text>
+    <text x="1200" y="126" font-size="13" fill="#8b5cf6" opacity="0.6"> as</text>
+    <text x="1220" y="126" font-size="13" fill="#06b6d4" opacity="0.6"> np</text>
+
+    <text x="1100" y="152" font-size="13" fill="#8b5cf6" opacity="0.6">import</text>
+    <text x="1148" y="152" font-size="13" fill="#e2e8f0" opacity="0.5"> tensorflow</text>
+    <text x="1228" y="152" font-size="13" fill="#8b5cf6" opacity="0.55"> as</text>
+    <text x="1248" y="152" font-size="13" fill="#06b6d4" opacity="0.6"> tf</text>
+
+    <text x="1100" y="188" font-size="13" fill="#8b5cf6" opacity="0.6">class</text>
+    <text x="1138" y="188" font-size="13" fill="#f59e0b" opacity="0.65"> NeuralNet</text>
+    <text x="1220" y="188" font-size="13" fill="#94a3b8" opacity="0.4">:</text>
+
+    <text x="1120" y="214" font-size="13" fill="#8b5cf6" opacity="0.55">  def</text>
+    <text x="1148" y="214" font-size="13" fill="#06b6d4" opacity="0.6"> __init__</text>
+    <text x="1208" y="214" font-size="13" fill="#94a3b8" opacity="0.4">(self, layers):</text>
+
+    <text x="1140" y="240" font-size="13" fill="#e2e8f0" opacity="0.45">    self.layers</text>
+    <text x="1240" y="240" font-size="13" fill="#94a3b8" opacity="0.4"> =</text>
+    <text x="1255" y="240" font-size="13" fill="#e2e8f0" opacity="0.45"> layers</text>
+
+    <text x="1120" y="276" font-size="13" fill="#8b5cf6" opacity="0.55">  def</text>
+    <text x="1148" y="276" font-size="13" fill="#06b6d4" opacity="0.6"> forward</text>
+    <text x="1208" y="276" font-size="13" fill="#94a3b8" opacity="0.4">(self, x):</text>
+
+    <text x="1140" y="302" font-size="13" fill="#8b5cf6" opacity="0.5">    for</text>
+    <text x="1168" y="302" font-size="13" fill="#e2e8f0" opacity="0.45"> layer</text>
+    <text x="1208" y="302" font-size="13" fill="#8b5cf6" opacity="0.5"> in</text>
+    <text x="1225" y="302" font-size="13" fill="#e2e8f0" opacity="0.45"> self.layers:</text>
+
+    <text x="1160" y="328" font-size="13" fill="#e2e8f0" opacity="0.45">      x</text>
+    <text x="1180" y="328" font-size="13" fill="#94a3b8" opacity="0.4"> =</text>
+    <text x="1194" y="328" font-size="13" fill="#e2e8f0" opacity="0.45"> layer</text>
+    <text x="1230" y="328" font-size="13" fill="#94a3b8" opacity="0.4">.</text>
+    <text x="1238" y="328" font-size="13" fill="#06b6d4" opacity="0.55">forward</text>
+    <text x="1285" y="328" font-size="13" fill="#94a3b8" opacity="0.4">(x)</text>
+
+    <text x="1140" y="354" font-size="13" fill="#8b5cf6" opacity="0.5">    return</text>
+    <text x="1195" y="354" font-size="13" fill="#e2e8f0" opacity="0.45"> x</text>
+
+    <!-- Docker/DevOps lower right -->
+    <text x="1100" y="430" font-size="13" fill="#6b7280" opacity="0.45"># Dockerfile</text>
+    <text x="1100" y="456" font-size="13" fill="#8b5cf6" opacity="0.65">FROM</text>
+    <text x="1132" y="456" font-size="13" fill="#10b981" opacity="0.6"> node:18-alpine</text>
+
+    <text x="1100" y="482" font-size="13" fill="#8b5cf6" opacity="0.6">WORKDIR</text>
+    <text x="1163" y="482" font-size="13" fill="#10b981" opacity="0.55"> /app</text>
+
+    <text x="1100" y="508" font-size="13" fill="#8b5cf6" opacity="0.55">COPY</text>
+    <text x="1133" y="508" font-size="13" fill="#e2e8f0" opacity="0.45"> package*.json ./</text>
+
+    <text x="1100" y="534" font-size="13" fill="#8b5cf6" opacity="0.55">RUN</text>
+    <text x="1125" y="534" font-size="13" fill="#06b6d4" opacity="0.6"> npm install</text>
+
+    <text x="1100" y="560" font-size="13" fill="#8b5cf6" opacity="0.55">EXPOSE</text>
+    <text x="1157" y="560" font-size="13" fill="#f59e0b" opacity="0.6"> 3000</text>
+
+    <text x="1100" y="586" font-size="13" fill="#8b5cf6" opacity="0.55">CMD</text>
+    <text x="1125" y="586" font-size="13" fill="#94a3b8" opacity="0.4"> ["node", "server.js"]</text>
+  </g>
+
+  <!-- Binary rain columns -->
+  <g font-family="'Courier New', monospace" font-size="11" opacity="0.12" fill="#06b6d4">
+    <text x="700" y="50">1</text><text x="700" y="68">0</text><text x="700" y="86">1</text><text x="700" y="104">1</text><text x="700" y="122">0</text><text x="700" y="140">0</text><text x="700" y="158">1</text>
+    <text x="720" y="80">0</text><text x="720" y="98">1</text><text x="720" y="116">0</text><text x="720" y="134">1</text><text x="720" y="152">1</text><text x="720" y="170">0</text>
+    <text x="740" y="60">1</text><text x="740" y="78">1</text><text x="740" y="96">0</text><text x="740" y="114">0</text><text x="740" y="132">1</text><text x="740" y="150">0</text>
+    <text x="760" y="90">0</text><text x="760" y="108">1</text><text x="760" y="126">1</text><text x="760" y="144">0</text><text x="760" y="162">1</text>
+    <text x="780" y="55">1</text><text x="780" y="73">0</text><text x="780" y="91">1</text><text x="780" y="109">0</text><text x="780" y="127">0</text><text x="780" y="145">1</text>
+  </g>
+
+  <!-- Glowing accent lines -->
+  <line x1="0" y1="540" x2="1920" y2="540" stroke="url(#lineGrad1)" stroke-width="1" opacity="0.3"/>
+  <line x1="960" y1="0" x2="960" y2="1080" stroke="url(#lineGrad1)" stroke-width="1" opacity="0.15"/>
+
+  <!-- Glowing orbs -->
+  <circle cx="200" cy="200" r="180" fill="#8b5cf6" opacity="0.04" filter="url(#softglow)"/>
+  <circle cx="1720" cy="880" r="220" fill="#06b6d4" opacity="0.04" filter="url(#softglow)"/>
+  <circle cx="960" cy="540" r="300" fill="#3b82f6" opacity="0.025" filter="url(#softglow)"/>
+  <circle cx="1600" cy="200" r="150" fill="#ec4899" opacity="0.03" filter="url(#softglow)"/>
+  <circle cx="300" cy="800" r="160" fill="#06b6d4" opacity="0.035" filter="url(#softglow)"/>
+
+  <!-- Bright circuit-like dots -->
+  <g fill="#8b5cf6" opacity="0.5" filter="url(#glow)">
+    <circle cx="480" cy="480" r="2.5"/>
+    <circle cx="640" cy="360" r="2"/>
+    <circle cx="800" cy="600" r="2.5"/>
+    <circle cx="320" cy="720" r="2"/>
+    <circle cx="1120" cy="480" r="2.5"/>
+    <circle cx="1280" cy="240" r="2"/>
+    <circle cx="1440" cy="660" r="2.5"/>
+    <circle cx="1600" cy="420" r="2"/>
+    <circle cx="560" cy="840" r="2"/>
+    <circle cx="1760" cy="540" r="2.5"/>
+  </g>
+  <g fill="#06b6d4" opacity="0.5" filter="url(#glow)">
+    <circle cx="400" cy="560" r="2"/>
+    <circle cx="720" cy="280" r="2.5"/>
+    <circle cx="880" cy="700" r="2"/>
+    <circle cx="1040" cy="420" r="2.5"/>
+    <circle cx="1200" cy="560" r="2"/>
+    <circle cx="1360" cy="340" r="2.5"/>
+    <circle cx="1520" cy="760" r="2"/>
+    <circle cx="240" cy="640" r="2.5"/>
+  </g>
+
+  <!-- Connecting lines between dots (circuit look) -->
+  <g stroke="#8b5cf6" stroke-width="0.8" opacity="0.15">
+    <line x1="480" y1="480" x2="640" y2="360"/>
+    <line x1="640" y1="360" x2="800" y2="600"/>
+    <line x1="320" y1="720" x2="480" y2="480"/>
+    <line x1="1120" y1="480" x2="1280" y2="240"/>
+    <line x1="1280" y1="240" x2="1440" y2="660"/>
+    <line x1="1440" y1="660" x2="1600" y2="420"/>
+    <line x1="1760" y1="540" x2="1600" y2="420"/>
+  </g>
+  <g stroke="#06b6d4" stroke-width="0.8" opacity="0.15">
+    <line x1="400" y1="560" x2="720" y2="280"/>
+    <line x1="720" y1="280" x2="880" y2="700"/>
+    <line x1="880" y1="700" x2="1040" y2="420"/>
+    <line x1="1040" y1="420" x2="1200" y2="560"/>
+    <line x1="1200" y1="560" x2="1360" y2="340"/>
+    <line x1="240" y1="640" x2="400" y2="560"/>
+  </g>
+</svg>

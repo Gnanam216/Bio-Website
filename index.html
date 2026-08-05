@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gnanasambandam Jayabal | Full Stack Software Engineer</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Full Stack Software Engineer with 4.6 years of experience in ASP.NET Core, React.js, .NET MAUI, MS SQL Server and Microsoft Azure.">
+  <meta name="keywords" content="Full Stack Developer, ASP.NET Core, React.js, .NET MAUI, Azure, Software Engineer, Chennai, Portfolio">
+  <meta name="author" content="Gnanasambandam Jayabal">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (Facebook, LinkedIn preview) -->
+  <meta property="og:title" content="Gnanasambandam Jayabal | Full Stack Software Engineer">
+  <meta property="og:description" content="Building scalable enterprise applications with .NET, React, and Microsoft Azure.">
+  <meta property="og:image" content="avatar.png">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gnanasambandam Jayabal | Full Stack Software Engineer">
+  <meta name="twitter:description" content="Building scalable enterprise applications with .NET, React, and Microsoft Azure.">
+  <meta name="twitter:image" content="avatar.png">
+
+  <!-- Theme color for mobile browser -->
+  <meta name="theme-color" content="#050a10">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <!-- JavaScript Config -->
+  <script src="config.js" defer></script>
+  <!-- JavaScript App Logic -->
+  <script src="app.js" defer></script>
+</head>
+<body class="dark-theme">
+
+  <!-- Full-screen animated background canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" id="nav-logo">Alex.M</a>
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme">
+          <i data-feather="sun" class="sun-icon"></i>
+          <i data-feather="moon" class="moon-icon"></i>
+        </button>
+        <button class="mobile-menu-btn" aria-label="Open navigation menu" id="mobile-menu-btn">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#education" class="mobile-nav-link">Education</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <main class="content-wrapper">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <span class="greeting-badge">Welcome to my portfolio</span>
+        <h1 class="hero-title" id="hero-name">Hi, I'm Alex Morgan</h1>
+        <h2 class="hero-subtitle" id="hero-title-text">Full Stack Engineer & UI Designer</h2>
+        <p class="hero-tagline" id="hero-tagline-text">Crafting beautiful, high-performance web experiences with modern technology.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn btn-primary">
+            <i data-feather="mail"></i>
+            <span>Get In Touch</span>
+          </a>
+          <a href="#" id="resume-link" class="btn btn-secondary" target="_blank">
+            <span>View Resume</span>
+            <i data-feather="external-link"></i>
+          </a>
+        </div>
+        <div class="hero-socials" id="hero-socials-container">
+          <!-- Populated by JS -->
+        </div>
+        <!-- Tech stack badges -->
+        <div class="hero-badges">
+          <span class="tech-badge">⚛️ React</span>
+          <span class="tech-badge">💜 .NET Core</span>
+          <span class="tech-badge">📱 MAUI</span>
+          <span class="tech-badge">☁️ Azure</span>
+          <span class="tech-badge">🛢️ SQL Server</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="profile-card-wrapper">
+          <div class="profile-card">
+            <div class="profile-img-container">
+              <!-- Animated SVG backup, will be replaced by generated image if loaded -->
+              <img id="profile-img" src="avatar.png" alt="Alex Morgan Profile" onerror="this.style.display='none'; document.getElementById('avatar-svg-placeholder').style.display='block';">
+              <svg id="avatar-svg-placeholder" viewBox="0 0 100 100" class="avatar-svg" style="display: none;">
+                <defs>
+                  <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--primary-color)" />
+                    <stop offset="100%" stop-color="var(--accent-color)" />
+                  </linearGradient>
+                </defs>
+                <circle cx="50" cy="50" r="48" fill="url(#avatarGrad)" opacity="0.15" stroke="url(#avatarGrad)" stroke-width="1.5" />
+                <circle cx="50" cy="40" r="18" fill="url(#avatarGrad)" />
+                <path d="M20 80 C 20 60, 80 60, 80 80" fill="url(#avatarGrad)" />
+              </svg>
+            </div>
+            <div class="profile-status">
+              <span class="status-dot"></span>
+              <span class="status-text">Available for work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section scroll-reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Introduction</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text-col">
+          <p class="about-description" id="about-bio-text">
+            <!-- Populated by JS -->
+          </p>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Based in</span>
+              <span class="info-value" id="about-location">San Francisco, CA</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email</span>
+              <span class="info-value" id="about-email">alex.morgan@example.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-stats-col">
+          <div class="stat-card">
+            <h3 class="stat-number">4.6</h3>
+            <p class="stat-label">Years of Experience</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="stat-number">3</h3>
+            <p class="stat-label">Companies Worked With</p>
+          </div>
+          <div class="stat-card">
+            <h3 class="stat-number">4.6</h3>
+            <p class="stat-label">Years of .NET & React Dev</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section scroll-reveal">
+      <div class="section-header">
+        <span class="section-subtitle">My Journey</span>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+      <div class="timeline" id="experience-timeline">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section scroll-reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Academic Background</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="education-grid" id="education-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section scroll-reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Expertise</span>
+        <h2 class="section-title">Skills & Tech Stack</h2>
+      </div>
+      <div class="skills-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="frontend">Frontend</button>
+        <button class="filter-btn" data-category="backend">Backend & DB</button>
+        <button class="filter-btn" data-category="tools">Tools & DevOps</button>
+      </div>
+      <div class="skills-grid" id="skills-container">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section scroll-reveal">
+      <div class="section-header">
+        <span class="section-subtitle">Get in Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's collaborate on your next big project!</h3>
+          <p>Feel free to reach out for contract opportunities, permanent positions, or just to say hello.</p>
+          <div class="contact-details-list">
+            <div class="contact-detail-item">
+              <div class="icon-box"><i data-feather="mail"></i></div>
+              <div>
+                <h4>Email</h4>
+                <a href="#" id="contact-email-link" class="contact-link">alex.morgan@example.com</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="icon-box"><i data-feather="phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <a href="#" id="contact-phone-link" class="contact-link">+91 8111025988</a>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="icon-box"><i data-feather="map-pin"></i></div>
+              <div>
+                <h4>Location</h4>
+                <span id="contact-location-text">San Francisco, CA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form id="contact-form" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email</label>
+                <input type="email" id="form-email" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" placeholder="Project Inquiry" required>
+            </div>
+            <div class="form-group">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span>Send Message</span>
+              <i data-feather="send"></i>
+            </button>
+            <div id="form-feedback" class="form-feedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="copyright">&copy; <span id="current-year">2026</span> <span id="footer-name">Alex Morgan</span>. All rights reserved.</p>
+      <div class="footer-links" id="footer-socials-container">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Back to top">
+    <i data-feather="arrow-up"></i>
+  </button>
+
+  <!-- ══════════════════════════════════════════
+       ANIMATED BACKGROUND — Canvas Engine
+       Particles · Sparks · Code Symbols · Beams
+  ══════════════════════════════════════════ -->
+  <script>
+  (function () {
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+
+    // ── Symbols that float across the background ──
+    const CODE_SYMBOLS = [
+      '</', '/>', '{}', '()', '=>', '&&', '||', '!=', '===',
+      'function', 'const', 'async', 'await', 'return', 'import',
+      'class', 'render()', '.then()', 'useState', 'useEffect',
+      'npm', 'git', 'API', 'JSON', 'HTTP', 'CSS', 'HTML',
+      '#', '@', '[]', '++', '--', '**', '::',
+      'fetch()', 'props', 'state', 'null', 'true',
+      'void', 'int', 'str', 'def ', 'if()', 'for()',
+      '📱', '💻', '⚡', '🚀', '🔥', '⚙️', '🌟'
+    ];
+
+    const COLORS = ['#8b5cf6','#06b6d4','#a78bfa','#38bdf8','#c084fc','#67e8f9','#ffffff'];
+
+    let W, H, particles, sparks, beams, symbols, mouseX = 0, mouseY = 0;
+
+    // ── Resize handler ──
+    function resize() {
+      W = canvas.width  = window.innerWidth;
+      H = canvas.height = window.innerHeight;
+    }
+
+    // ── Particle (dot / node) ──
+    function createParticle() {
+      return {
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 1.8 + 0.4,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        alpha: Math.random() * 0.5 + 0.2,
+        color: COLORS[Math.floor(Math.random() * 4)],
+        sparkPhase: Math.random() * Math.PI * 2,
+        sparkSpeed: Math.random() * 0.03 + 0.01
+      };
+    }
+
+    // ── Spark (bright burst) ──
+    function createSpark(x, y) {
+      return {
+        x: x ?? Math.random() * W,
+        y: y ?? Math.random() * H,
+        r: Math.random() * 3 + 1,
+        maxR: Math.random() * 6 + 3,
+        alpha: 1,
+        decay: Math.random() * 0.02 + 0.01,
+        color: COLORS[Math.floor(Math.random() * COLORS.length)]
+      };
+    }
+
+    // ── Floating code symbol ──
+    function createSymbol() {
+      const sym = CODE_SYMBOLS[Math.floor(Math.random() * CODE_SYMBOLS.length)];
+      return {
+        text: sym,
+        x: Math.random() * W,
+        y: Math.random() * H,
+        size: Math.floor(Math.random() * 8 + 10),
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: -(Math.random() * 0.4 + 0.1),
+        alpha: Math.random() * 0.18 + 0.06,
+        targetAlpha: Math.random() * 0.18 + 0.06,
+        color: COLORS[Math.floor(Math.random() * COLORS.length)],
+        fadeDir: 1,
+        fadeSpeed: Math.random() * 0.002 + 0.001
+      };
+    }
+
+    // ── Beam (shooting laser line) ──
+    function createBeam() {
+      const fromLeft = Math.random() > 0.5;
+      return {
+        x: fromLeft ? 0 : W,
+        y: Math.random() * H,
+        len: Math.random() * 180 + 80,
+        speed: (Math.random() * 3 + 2) * (fromLeft ? 1 : -1),
+        alpha: Math.random() * 0.35 + 0.1,
+        width: Math.random() * 1.5 + 0.5,
+        color: COLORS[Math.floor(Math.random() * 3)],
+        active: true
+      };
+    }
+
+    // ── Initialize ──
+    function init() {
+      resize();
+      particles = Array.from({ length: 130 }, createParticle);
+      sparks    = [];
+      beams     = Array.from({ length: 8 }, createBeam);
+      symbols   = Array.from({ length: 38 }, createSymbol);
+
+      // Seed random sparks
+      for (let i = 0; i < 20; i++) sparks.push(createSpark());
+    }
+
+    // ── Draw connections between nearby particles ──
+    function drawConnections() {
+      const maxDist = 120;
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < maxDist) {
+            const opacity = (1 - dist / maxDist) * 0.14;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(245,158,11,${opacity})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+        // Mouse attraction lines
+        const mdx = particles[i].x - mouseX;
+        const mdy = particles[i].y - mouseY;
+        const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
+        if (mDist < 160) {
+          const opacity = (1 - mDist / 160) * 0.4;
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(mouseX, mouseY);
+          ctx.strokeStyle = `rgba(251,146,60,${opacity})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+
+    // ── Main render loop ──
+    function draw() {
+      // Clear with transparent so bg.png image shows through
+      ctx.clearRect(0, 0, W, H);
+
+      // ── Subtle dark vignette on top of image ──
+      const vig = ctx.createRadialGradient(W/2, H/2, H*0.1, W/2, H/2, W*0.85);
+      vig.addColorStop(0, 'rgba(2,6,18,0)');
+      vig.addColorStop(1, 'rgba(2,6,18,0.45)');
+      ctx.fillStyle = vig;
+      ctx.fillRect(0, 0, W, H);
+
+      // ── Radial ambient glow ──
+      const grd = ctx.createRadialGradient(W * 0.2, H * 0.2, 0, W * 0.2, H * 0.2, W * 0.6);
+      grd.addColorStop(0, 'rgba(139,92,246,0.07)');
+      grd.addColorStop(1, 'transparent');
+      ctx.fillStyle = grd;
+      ctx.fillRect(0, 0, W, H);
+
+      const grd2 = ctx.createRadialGradient(W * 0.8, H * 0.75, 0, W * 0.8, H * 0.75, W * 0.55);
+      grd2.addColorStop(0, 'rgba(6,182,212,0.06)');
+      grd2.addColorStop(1, 'transparent');
+      ctx.fillStyle = grd2;
+      ctx.fillRect(0, 0, W, H);
+
+      // ── Beams ──
+      beams.forEach((b, i) => {
+        ctx.save();
+        const grad = ctx.createLinearGradient(b.x, b.y, b.x + b.len * Math.sign(b.speed), b.y);
+        grad.addColorStop(0, `rgba(255,255,255,0)`);
+        grad.addColorStop(0.4, b.color.replace(')', `,${b.alpha})`).replace('rgb','rgba'));
+        grad.addColorStop(1, `rgba(255,255,255,0)`);
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = b.width;
+        ctx.shadowColor = b.color;
+        ctx.shadowBlur = 6;
+        ctx.beginPath();
+        ctx.moveTo(b.x, b.y);
+        ctx.lineTo(b.x + b.len * Math.sign(b.speed), b.y);
+        ctx.stroke();
+        ctx.restore();
+
+        b.x += b.speed;
+        if (b.x > W + 300 || b.x < -300) {
+          beams[i] = createBeam();
+        }
+      });
+
+      // ── Connections ──
+      drawConnections();
+
+      // ── Particles ──
+      particles.forEach(p => {
+        p.sparkPhase += p.sparkSpeed;
+        const sparkle = (Math.sin(p.sparkPhase) * 0.5 + 0.5); // 0..1
+        const radius  = p.r + sparkle * 1.2;
+        const alpha   = p.alpha * (0.5 + sparkle * 0.5);
+
+        ctx.save();
+        ctx.shadowColor = p.color;
+        ctx.shadowBlur  = sparkle > 0.7 ? 12 : 4;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, radius, 0, Math.PI * 2);
+        ctx.fillStyle = p.color.replace(')', `,${alpha})`).replace('#','rgba(').replace(/([0-9a-f]{2})/gi, (m,g) => parseInt(g,16)+',').slice(0,-1) ;
+
+        // Simpler alpha approach
+        ctx.globalAlpha = alpha;
+        ctx.fillStyle = p.color;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.restore();
+
+        // Move
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0) p.x = W;
+        if (p.x > W) p.x = 0;
+        if (p.y < 0) p.y = H;
+        if (p.y > H) p.y = 0;
+      });
+
+      // ── Sparks ──
+      for (let i = sparks.length - 1; i >= 0; i--) {
+        const s = sparks[i];
+        ctx.save();
+        ctx.globalAlpha = s.alpha;
+        ctx.shadowColor = s.color;
+        ctx.shadowBlur  = s.r * 4;
+        // Cross / star shape
+        ctx.strokeStyle = s.color;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(s.x - s.r, s.y);
+        ctx.lineTo(s.x + s.r, s.y);
+        ctx.moveTo(s.x, s.y - s.r);
+        ctx.lineTo(s.x, s.y + s.r);
+        ctx.stroke();
+        // Center dot
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r * 0.4, 0, Math.PI * 2);
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+        ctx.restore();
+
+        s.r   += 0.15;
+        s.alpha -= s.decay;
+        if (s.alpha <= 0 || s.r >= s.maxR) sparks.splice(i, 1);
+      }
+
+      // Spawn new sparks periodically
+      if (Math.random() < 0.08) sparks.push(createSpark());
+
+      // ── Floating code symbols ──
+      symbols.forEach((sym, i) => {
+        sym.alpha += sym.fadeDir * sym.fadeSpeed;
+        if (sym.alpha >= sym.targetAlpha) { sym.fadeDir = -1; }
+        if (sym.alpha <= 0.02) {
+          // Respawn
+          symbols[i] = createSymbol();
+          return;
+        }
+
+        ctx.save();
+        ctx.globalAlpha = sym.alpha;
+        ctx.font = `${sym.size}px 'Courier New', monospace`;
+        ctx.fillStyle = sym.color;
+        ctx.shadowColor = sym.color;
+        ctx.shadowBlur  = 8;
+        ctx.fillText(sym.text, sym.x, sym.y);
+        ctx.restore();
+
+        sym.x += sym.vx;
+        sym.y += sym.vy;
+
+        // Wrap around
+        if (sym.y < -30) { sym.y = H + 10; sym.x = Math.random() * W; }
+        if (sym.x < -60) { sym.x = W + 10; }
+        if (sym.x > W + 60) { sym.x = -10; }
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    // ── Mouse tracking ──
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      // Spawn spark on fast movement
+      if (Math.random() < 0.12) sparks.push(createSpark(e.clientX, e.clientY));
+    });
+
+    // ── Click burst ──
+    document.addEventListener('click', e => {
+      for (let i = 0; i < 12; i++) {
+        const angle = (Math.PI * 2 * i) / 12;
+        const dist  = Math.random() * 40;
+        sparks.push(createSpark(
+          e.clientX + Math.cos(angle) * dist,
+          e.clientY + Math.sin(angle) * dist
+        ));
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      resize();
+      init();
+    });
+
+    init();
+    draw();
+  })();
+  </script>
+</body>
+</html>

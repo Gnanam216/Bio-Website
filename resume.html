@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gnanasambandam Jayabal - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #0f172a;
+      --secondary-color: #475569;
+      --border-color: #e2e8f0;
+      --bg-color: #ffffff;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--primary-color);
+      line-height: 1.5;
+      padding: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    /* Header Section */
+    .header {
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+    }
+    
+    .name {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 5px;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      color: var(--secondary-color);
+      font-size: 0.95rem;
+    }
+    
+    .contact-info span {
+      display: flex;
+      align-items: center;
+    }
+    
+    /* Section Styles */
+    .section {
+      margin-bottom: 25px;
+    }
+    
+    .section-title {
+      font-size: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 5px;
+      margin-bottom: 12px;
+      color: var(--primary-color);
+    }
+    
+    .objective-text {
+      color: var(--secondary-color);
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+    
+    /* Education Table */
+    .edu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 5px;
+      font-size: 0.95rem;
+    }
+    
+    .edu-table th, .edu-table td {
+      border: 1px solid var(--border-color);
+      padding: 10px 12px;
+      text-align: left;
+    }
+    
+    .edu-table th {
+      background-color: #f8fafc;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    
+    /* Skills Grid */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 25px;
+      font-size: 0.95rem;
+    }
+    
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .skill-category {
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 2px;
+    }
+    
+    .skill-list {
+      color: var(--secondary-color);
+    }
+    
+    /* Experience Section */
+    .exp-item {
+      margin-bottom: 20px;
+    }
+    
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 5px;
+      flex-wrap: wrap;
+    }
+    
+    .exp-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    
+    .exp-company {
+      font-style: italic;
+      color: var(--secondary-color);
+    }
+    
+    .exp-meta {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--secondary-color);
+    }
+    
+    .exp-bullets {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 8px;
+      font-size: 0.92rem;
+      color: var(--secondary-color);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    /* Print Utility */
+    .print-banner {
+      background-color: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .print-btn {
+      background-color: #0f172a;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    
+    .print-btn:hover {
+      background-color: #1e293b;
+    }
+    
+    @media print {
+      .print-banner {
+        display: none;
+      }
+      body {
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print Instruction Banner -->
+  <div class="print-banner">
+    <span>💡 <strong>Tip:</strong> You can save this resume directly as a PDF! Press the button on the right, or press <strong>Ctrl + P</strong> and select <strong>"Save as PDF"</strong> as your destination printer.</span>
+    <button onclick="window.print()" class="print-btn">Print / Save as PDF</button>
+  </div>
+
+  <header class="header">
+    <h1 class="name">Gnanasambandam Jayabal</h1>
+    <div class="contact-info">
+      <span>📍 Chennai, Tamil Nadu</span>
+      <span>📞 +91 8111025988</span>
+      <span>✉️ <a href="mailto:jayabalgnanam@gmail.com" style="color: inherit; text-decoration: none;">jayabalgnanam@gmail.com</a></span>
+    </div>
+  </header>
+
+  <!-- Objective Section -->
+  <section class="section">
+    <h2 class="section-title">Objective</h2>
+    <p class="objective-text">
+      Results-driven Software Engineer with 4.6 years of experience in Full Stack Development using ASP.NET Core, C#, React.js, .NET MAUI, MS SQL Server, and Microsoft Azure. Proven expertise in developing scalable enterprise applications, implementing CI/CD pipelines, leading Agile development activities, conducting code reviews, and mentoring team members. Skilled in Azure App Services, Azure DevOps, and end-to-end software delivery, with a strong focus on performance, quality, and business value.
+    </p>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section">
+    <h2 class="section-title">Education</h2>
+    <table class="edu-table">
+      <thead>
+        <tr>
+          <th>Qualification</th>
+          <th>Institution</th>
+          <th>Location</th>
+          <th>Percentage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>B.E. Mechanical Engineering</strong></td>
+          <td>Mailam Engineering College</td>
+          <td>Villupuram</td>
+          <td>74.50%</td>
+        </tr>
+        <tr>
+          <td><strong>Higher Secondary (12th)</strong></td>
+          <td>SJSV Higher Secondary School</td>
+          <td>Villupuram</td>
+          <td>75%</td>
+        </tr>
+        <tr>
+          <td><strong>SSLC (10th)</strong></td>
+          <td>Mount Park Higher Secondary School</td>
+          <td>Thiyagadurgam</td>
+          <td>92%</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-container">
+      <div class="skill-item">
+        <span class="skill-category">Programming & Frameworks</span>
+        <span class="skill-list">C#, ASP.NET Core, ASP.NET, Web API, React.js, JavaScript, .NET MAUI, Entity Framework, LINQ</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-category">Database</span>
+        <span class="skill-list">MS SQL Server</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-category">Cloud & DevOps</span>
+        <span class="skill-list">Microsoft Azure, Azure App Services, Azure DevOps, CI/CD Pipelines</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-category">Version Control</span>
+        <span class="skill-list">Git, GitHub, Azure Repos</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-category">Methodologies</span>
+        <span class="skill-list">Agile Scrum, Sprint Planning, Daily Stand-ups, Sprint Reviews, Retrospectives</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-category">Core Strengths</span>
+        <span class="skill-list">End-to-End Development, REST API Development, Performance Optimization, Scalable System Design, Database Design & Query Optimization, Technical Leadership</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section">
+    <h2 class="section-title">Professional Experience</h2>
+    
+    <!-- Experience 1 -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-title">Software Engineer</span> - 
+          <span class="exp-company">ProPhoenix Technologies Software Solution Pvt. Ltd.</span>
+        </div>
+        <span class="exp-meta">Chennai | Dec 2023 - Present</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Reviewing business requirements, preparing effort estimates, and coordinating development activities.</li>
+        <li>Conducting code reviews and providing technical guidance to team members.</li>
+        <li>Managing Agile Scrum ceremonies including Daily Stand-ups, Sprint Planning, Sprint Reviews, and Retrospectives.</li>
+        <li>Working closely with Product Owners, Business Analysts, QA teams, and stakeholders to ensure successful project delivery.</li>
+        <li>Monitoring team performance and ensuring adherence to coding standards, security standards, and best practices.</li>
+        <li>Supporting team members through mentoring, knowledge sharing, and performance feedback.</li>
+        <li>Designing and developing scalable RESTful APIs using ASP.NET Core Web API and Clean Architecture.</li>
+        <li>Developing responsive web applications using React.js and cross-platform mobile applications using .NET MAUI.</li>
+        <li>Designing and optimizing database structures and SQL Server queries for performance and scalability.</li>
+        <li>Utilizing Entity Framework and LINQ for efficient data access and business logic implementation.</li>
+        <li>Managing source code repositories using Git and collaborating through Azure DevOps.</li>
+        <li>Following Git branching strategies, code merge processes, pull request reviews, and release management.</li>
+        <li>Implementing CI/CD pipelines using Azure DevOps for automated build and deployment processes.</li>
+        <li>Deploying and maintaining applications in Microsoft Azure App Services.</li>
+        <li>Managing application hosting, monitoring, configuration, and deployments through Azure services.</li>
+        <li>Preparing project status reports, delivery metrics, and progress updates for Managers and stakeholders.</li>
+        <li>Reporting project risks, technical challenges, resource requirements, and delivery achievements to management.</li>
+        <li>Coordinating with cross-functional teams for successful production deployments and support activities.</li>
+        <li>Contributing throughout the complete Software Development Life Cycle (SDLC), from requirement gathering to production support.</li>
+      </ul>
+    </div>
+
+    <!-- Experience 2 -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-title">Software Engineer</span> - 
+          <span class="exp-company">Leiten Technologies Pvt. Ltd.</span>
+        </div>
+        <span class="exp-meta">Chennai | Sep 2022 – Oct 2023</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Worked on Philips' internal Daily Log Update System.</li>
+        <li>Built end-to-end backend services and frontend interfaces.</li>
+        <li>Developed workflow management modules.</li>
+        <li>Implemented business logic using ASP.NET Core and C#.</li>
+        <li>Designed and optimized SQL queries.</li>
+        <li>Delivered production-ready features used in daily operations.</li>
+      </ul>
+    </div>
+
+    <!-- Experience 3 -->
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-title">Quality Assurance Engineer</span> - 
+          <span class="exp-company">TVS Sundram Fasteners Limited</span>
+        </div>
+        <span class="exp-meta">Velappanchavadi, Chennai | Aug 2021 – Aug 2022</span>
+      </div>
+      <ul class="exp-bullets">
+        <li>Performed quality inspection of manufactured components to ensure compliance with company standards.</li>
+        <li>Measured product dimensions using Vernier Callipers, Micrometres, and Height Gauges.</li>
+        <li>Conducted in-process and final inspections.</li>
+        <li>Identified defects and reported non-conforming products.</li>
+        <li>Maintained quality inspection records.</li>
+        <li>Worked with production teams to improve product quality and reduce defects.</li>
+      </ul>
+    </div>
+  </section>
+
+</body>
+</html>
