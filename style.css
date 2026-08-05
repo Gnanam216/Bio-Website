@@ -96,11 +96,11 @@ body::before {
   background-image:
     linear-gradient(
       135deg,
-      rgba(2, 6, 18, 0.72) 0%,
-      rgba(4, 10, 28, 0.60) 45%,
-      rgba(2, 8, 20, 0.72) 100%
+      rgba(2, 6, 18, 0.78) 0%,
+      rgba(4, 10, 28, 0.65) 45%,
+      rgba(2, 8, 20, 0.78) 100%
     ),
-    url('bg.png');
+    url('bg-tech.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -125,7 +125,7 @@ body.light-theme::before {
       rgba(232, 240, 254, 0.82) 45%,
       rgba(245, 240, 255, 0.88) 100%
     ),
-    url('bg.png');
+    url('bg-tech.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
