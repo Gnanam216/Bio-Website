@@ -30,8 +30,12 @@ function initPersonalInfo() {
   const profileImg = document.getElementById('profile-img');
   if (profileImg) profileImg.alt = `${info.name} Profile`;
 
-  document.getElementById('nav-logo').textContent =
-    info.name.split(' ')[0] + '.' + (info.name.split(' ')[1]?.charAt(0) || 'Bio');
+  const navLogo = document.getElementById('nav-logo');
+  if (navLogo) {
+    const first = info.name.split(' ')[0];
+    const last  = info.name.split(' ')[1]?.charAt(0) || 'J';
+    navLogo.innerHTML = `${first}<span>.${last}</span>`;
+  }
 
   document.getElementById('hero-name').textContent = `Hi, I'm ${info.name}`;
   // hero-title-text is handled by typing effect
@@ -67,18 +71,18 @@ function initTypingEffect() {
 
   const phrases = [
     PORTFOLIO_DATA.personalInfo.title,
-    'Web & Mobile Developer',
-    '.NET Core Expert',
+    '.NET Core & C# Engineer',
     'React.js Developer',
-    'Azure Cloud Engineer',
+    'Azure Cloud Architect',
+    'Mobile App Developer (.NET MAUI)',
   ];
 
   let phraseIdx = 0, charIdx = 0, deleting = false;
 
-  // Remove gradient clip so typing cursor looks right; restore after
+  // Remove any gradient clip so typing text looks right
   el.style.webkitTextFillColor = '';
-  el.style.backgroundImage    = 'none';
-  el.style.color               = 'var(--text-color)';
+  el.style.backgroundImage    = '';
+  el.style.color               = '';
 
   function tick() {
     const current = phrases[phraseIdx];
